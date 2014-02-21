@@ -24,6 +24,9 @@ have ``pip`` installed, you can install it with ``easy_install pip``.
     $ source venv/bin/activate
     $ pip install -r requirements/compiled.txt
 
+.. note:: If you use brew on Mac and hit a clang issue, check out
+https://stackoverflow.com/questions/20325473/error-installing-python-image-library-using-pip-on-mac-os-x-10-9
+
 .. note:: The adventurous may prefer to use virtualenvwrapper_ instead of
    manually creating a virtualenv.
 
@@ -41,6 +44,10 @@ have ``pip`` installed, you can install it with ``easy_install pip``.
 5. Initialize your database structure::
 
     $ python manage.py syncdb
+
+django.contrib.auth.models.DoesNotExist: Permission matching query does not
+exist. until you run this twice
+
     $ python manage.py migrate
 
 Running the Development Server
@@ -49,6 +56,8 @@ Running the Development Server
 You can launch the development server like so::
 
     $ python manage.py runserver
+
+UndefinedError: 'gettext' is undefined
 
 Localization
 ------------
